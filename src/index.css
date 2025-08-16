@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Space-Optimized Quiz Generator Design System 
+All colors MUST be HSL. Focus on density and efficiency.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors - Vibrant Blue to Purple Gradient */
+    --primary: 217 91% 60%;        /* #3B82F6 - Bright Blue */
+    --primary-variant: 252 83% 57%; /* #8B5CF6 - Purple */
+    --primary-foreground: 0 0% 100%;
+
+    /* Accent Colors */
+    --accent-blue: 217 91% 60%;     /* #3B82F6 */
+    --accent-purple: 252 83% 57%;   /* #8B5CF6 */
+    --accent-green: 158 64% 52%;    /* #10B981 */
+    --accent-orange: 25 95% 53%;    /* #F97316 */
+
+    /* Space-Optimized Backgrounds */
+    --background: 0 0% 100%;
+    --background-secondary: 220 13% 98%;  /* #F9FAFB */
+    --foreground: 215 25% 27%;           /* #374151 */
+
+    /* Dense UI Components */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+    --card-border: 220 13% 91%;          /* #E5E7EB */
+
+    /* Compact Form Elements */
+    --input: 220 13% 91%;               /* #E5E7EB */
+    --input-foreground: 215 25% 27%;
+    --border: 220 13% 91%;
+
+    /* Efficient Secondary Elements */
+    --secondary: 220 13% 98%;           /* #F9FAFB */
+    --secondary-foreground: 215 16% 47%; /* #6B7280 */
+
+    /* Minimal Muted Elements */
+    --muted: 220 13% 91%;               /* #E5E7EB */
+    --muted-foreground: 215 16% 47%;    /* #6B7280 */
+
+    /* Compact Accent */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status Colors - Compact */
+    --success: 158 64% 52%;             /* #10B981 */
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;           /* #EF4444 */
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;              /* #F59E0B */
+    --warning-foreground: 0 0% 100%;
+
+    /* Dense Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Focus Ring - Minimal */
+    --ring: 217 91% 60%;
+
+    /* Space-Optimized Radius */
+    --radius: 0.375rem;  /* 6px - smaller than default */
+
+    /* Dense Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(252 83% 57%));
+    --gradient-blue-purple: linear-gradient(135deg, hsl(217 91% 60%), hsl(252 83% 57%));
+    --gradient-green: linear-gradient(135deg, hsl(158 64% 52%), hsl(142 71% 45%));
+    --gradient-orange: linear-gradient(135deg, hsl(25 95% 53%), hsl(20 91% 48%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 13% 98%));
+
+    /* Compact Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-elegant: 0 10px 25px -5px hsl(217 91% 60% / 0.25);
+
+    /* Dense Transitions */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
